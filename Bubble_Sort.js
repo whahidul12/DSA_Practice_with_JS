@@ -1,3 +1,6 @@
+"use strict";
+
+console.time("time: ");
 function BubbleSort(myArr) {
     let swap;
     do {
@@ -15,3 +18,6 @@ function BubbleSort(myArr) {
 let myArr = [7, 12, 9, 11, 3, -2];
 BubbleSort(myArr);
 console.log(myArr);
+console.timeEnd("time: ");
+
+//Big O = O(n^2);
