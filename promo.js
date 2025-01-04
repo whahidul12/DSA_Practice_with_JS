@@ -1,23 +1,26 @@
 "use strict";
 
-class anoObj {
-    constructor(nam, age) {
-        this.name = {
-            firstname: "Whahidul",
-            lastname: "Islam"
-        };
-        this.age = age;
-        this.gender = "male";
-        this.email = "email@m.com";
-        this.sleep = function sleep() {
-            return console.log(`${this.name.firstname} ${this.name.lastname} is sleeping...zzz`);
-        };
-        this.drive = function drive() {
-            return console.log(`${this.name.firstname} ${this.name.lastname} is ${this.age} years old and ${nam}`);
-        };
-    }
+const person = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 50,
+    eyeColor: "blue"
+};
+function Pperson(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
 }
 
-const jack = new anoObj("pizza", 19);
-console.log(jack.drive());
+// Create 2 Person Objects
+const myFather = new Pperson("John", "Doe", 50, "blue");
+const myMother = new Pperson("Sally", "Rally", 48, "green");
+
+// Add a new Property
+Person.nationality = "English";
+
+
+
+
 
