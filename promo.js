@@ -1,30 +1,31 @@
 "use strict";
 
-const Person = {
-    name: "whahidul islam",
-    age: 21,
-    sex: "male",
-    eat: () => {
-        console.log("he is eating");
-
-    },
-    walk: () => {
-        console.log("he is walking");
-
-    },
-    sleep: function () {
-        console.log("sleeping...");
-
+function Iteretor(values) {
+    let nextIndex = 0;
+    return {
+        next: function () {
+            if (nextIndex < values.length) {
+                return {
+                    value: values[nextIndex++],
+                    hasLeft: true
+                }
+            }
+            else {
+                return {
+                    hasLeft: false
+                }
+            }
+        }
     }
-
 }
 
-console.log(Person);
+const myArr = ['apple', 'Grape', 'orange', 'bhindi'];
 
-Person.age = 22;
-console.log(Person);
+const got = Iteretor(myArr);
 
-
+while (got.next().value !== undefined) {
+    console.log(got.next().value);
+}
 
 
 
